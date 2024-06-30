@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Souls 2 Bingo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="container">
+        <h1>Dark Souls 2 Bingo</h1>
+
+        <div id="button-container">
+            <button class="size-button" id="size-3x3" onclick="setGridSize(3)">3x3 Grid</button>
+            <button class="size-button" id="size-4x4" onclick="setGridSize(4)">4x4 Grid</button>
+            <button class="size-button" id="size-5x5" onclick="setGridSize(5)">5x5 Grid</button>
+        </div>
+        
+        <div id="bingo-board"></div>
+        <button id="refresh-button" onclick="generateBingoBoard()">Refresh Board</button>
+
+        <div id="color-selection">
+            <label for="color">Select your color: </label>
+            <input type="color" id="color" name="color" value="#ff0000">
+        </div>
+    </div>
+    <img src="bg.png" id="background-image" alt="Background Image">
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
